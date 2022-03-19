@@ -5,10 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
-    <Grid>
-        <Image Width="1920" Name="Mondstadt" Source="C:\Users\TomVa\source\repos\FarmingImpact\View\Regions\Screenshot 2022-03-19 140634.png" Stretch="UniformToFill"/>
+        Title="MainWindow" Height="600" Width="800" MaxWidth="800" MaxHeight="600" HorizontalContentAlignment="Stretch" MinWidth="800" MinHeight="600">
+    <TabControl HorizontalAlignment="Stretch">
+        <TabItem Header="Mondstadt" HorizontalAlignment="Center" Width="145" UseLayoutRounding="True" Margin="0,-2,0,0" Height="24" VerticalAlignment="Top">
+            <Grid>
+                <Image Name="Mondstadt" Source="C:\Users\TomVa\source\repos\FarmingImpact\View\Regions\Screenshot 2022-03-19 140634.png" Stretch="UniformToFill" MaxWidth="800" MaxHeight="600" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="545" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="794" UseLayoutRounding="False"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="TabItem" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" Width="145" HorizontalAlignment="Center" Margin="0,-1,0,0" Height="26" VerticalAlignment="Top"/>
+        <TabItem Header="TabItem" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.613" Width="145" HorizontalAlignment="Center" VerticalAlignment="Center" Height="22">
+            <Grid Background="#FFE5E5E5"/>
+        </TabItem>
+    </TabControl>
 
-
-    </Grid>
 </Window>
