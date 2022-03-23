@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Classes\Contr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", "{70C9DBC9-CA32-46C7-972B-C0159BD133BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{124980D3-8C1C-457C-B38A-049A8E43C284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{124980D3-8C1C-457C-B38A-049A8E43C284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{C3414AF5-F87A-4770-B391-85276B455195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{124980D3-8C1C-457C-B38A-049A8E43C284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{124980D3-8C1C-457C-B38A-049A8E43C284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{124980D3-8C1C-457C-B38A-049A8E43C284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3414AF5-F87A-4770-B391-85276B455195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3414AF5-F87A-4770-B391-85276B455195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3414AF5-F87A-4770-B391-85276B455195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3414AF5-F87A-4770-B391-85276B455195}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
