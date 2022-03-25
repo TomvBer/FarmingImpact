@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using DatabaseEnd.Models;
 
-namespace DatabaseEnd.Models
+namespace DatabaseEnd.Controller
 {
-    public class Drops
+    public class DropsController
     {
-        [Key]
+
         public int DropId { get; set; }
         public Materials? Materials { get; set; }
         public int Min { get; set; }

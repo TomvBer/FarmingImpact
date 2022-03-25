@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
-namespace Database.Models
+namespace DatabaseEnd.Models
 {
-  public class Rarity
+    public class Rarity
     {
+        [Key]
         public int RarityId { get; set; }
         public string Name { get; set; }
     }

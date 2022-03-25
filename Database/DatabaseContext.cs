@@ -1,37 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Entity;
-using System.Data.SqlClient;
-using System.Data.Entity;
-using Database.Models;
-
-namespace Database;
-public class DatabaseContext : DbContext
+﻿namespace DatabaseEnd
 {
-    public DbSet<Area> Areas { get; set; }
-    public DbSet<Coordination> Coordinations { get; set; }
-    public DbSet<Drops> Drops { get; set; }
-    public DbSet<Enemies> Enemies { get; set; }
-    public DbSet<Materials> Materials { get; set; }
-    public DbSet<Mobs> Mobs { get; set; }
-    public DbSet<Rarity> Rarities { get; set; }
-    public DbSet<Region> Regions { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Data.Entity;
+    using System.Data.SqlClient;
+    using DatabaseEnd.Models;
+    using System.ComponentModel.DataAnnotations;
 
-    private readonly SqlConnectionStringBuilder builder = new();
-    private SqlConnection Connection { get; set; }
-    public DatabaseContext() : base()
+    public class DatabaseContext : DbContext 
     {
+      
+        
+        public DbSet<AreaController> Areas { get; set; }
 
-        builder.DataSource = @"(localdb)\MSSQLLocalDB";
-        builder.InitialCatalog = "FarmingImpact";
+        public DbSet<Drops> Drops { get; set; }
+        public DbSet<Enemies> Enemies { get; set; }
+        public DbSet<Materials> Materials { get; set; }
+        public DbSet<Mobs> Mobs { get; set; }
+        public DbSet<Rarity> Rarities { get; set; }
+        public DbSet<Region> Regions { get; set; }
 
+        private readonly SqlConnectionStringBuilder builder = new();
+        private SqlConnection Connection { get; set; }
+        public DatabaseContext() : base("FarmingImpact")
+        {
+            builder.DataSource = @"(localdb)\MSSQLLocalDB";
+            builder.InitialCatalog = "FarmingImpact";
+            Connection = new(builder.ConnectionString);
+        }
 
-        Connection = new(builder.ConnectionString);
     }
-
 }
 
 

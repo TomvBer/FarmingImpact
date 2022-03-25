@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using DatabaseEnd.Models;
 
-namespace DatabaseEnd.Models
+namespace DatabaseEnd.Controller
 {
-    public class Enemies
+    public class EnemiesController
     {
-        [Key]
+
         public int EnemyId { get; set; }
         public string EnemyName { get; set; }
         public Drops? Drops { get; set; }

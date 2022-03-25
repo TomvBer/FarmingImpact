@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using DatabaseEnd.Models;
 
-namespace DatabaseEnd.Models
+namespace DatabaseEnd.Controller
 {
-    public class AreaController
+    public class RegionController
     {
-        [Key]
-        public int AreaId { get; set; }
-        public Region? Region { get; set; }
+        public int RegionId { get; set; }
+        public string Name { get; set; }
 
-        public string AreaName { get; set; }
     }
 }

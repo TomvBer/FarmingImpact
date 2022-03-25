@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-namespace Database.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace DatabaseEnd.Models
 {
     public class Region
     {
-      public  int RegionId { get; set; }
-      public string Name { get; set; }
-      
+        [Key]
+        public int RegionId { get; set; }
+        public string Name { get; set; }
+
     }
 }

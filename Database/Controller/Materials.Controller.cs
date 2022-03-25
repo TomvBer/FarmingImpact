@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using DatabaseEnd.Models;
 
-namespace DatabaseEnd.Models
+namespace DatabaseEnd.Controller
 {
-    public class Materials
+    public class MaterialsController
     {
-        [Key]
+
         public int MaterialId { get; set; }
         public string Name { get; set; }
         public RarityController? Rarity { get; set; }
