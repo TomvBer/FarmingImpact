@@ -32,17 +32,6 @@ public class DatabaseContext : DbContext
         Connection = new(builder.ConnectionString);
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-       => options.UseSqlServer(Connection);
-
-
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-
-
-    }
-
 }
 
 
