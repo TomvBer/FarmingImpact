@@ -13,6 +13,6 @@ namespace DatabaseEnd.Models
         [Key]
         public int MaterialId { get; set; }
         public string Name { get; set; }
-        public RarityController? Rarity { get; set; }
+        public Rarity? Rarity { get; set; }
     }
 }
