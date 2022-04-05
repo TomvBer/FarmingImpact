@@ -11,10 +11,6 @@ namespace DatabaseEnd.Controller
 {
     public class AreaController
     {
-
-        public int AreaId { get; set; }
-        public Region? Region { get; set; }
-
-        public string AreaName { get; set; }
+        Area Area { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DatabaseEnd.Models
 {
-    public class AreaController
+    public class Area
     {
         [Key]
         public int AreaId { get; set; }

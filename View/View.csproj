@@ -11,8 +11,4 @@
     <Folder Include="Regions\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Classes\Controller.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -7,13 +7,12 @@
     using System.Threading.Tasks;
     using System.Data.Entity;
     using System.Data.SqlClient;
-    using DatabaseEnd.Models;
     using System.ComponentModel.DataAnnotations;
+    using DatabaseEnd.Models;
 
-    public class DatabaseContext : DbContext 
+    public class DatabaseConnection : DbContext
     {
-      
-        
+
         public DbSet<Area> Areas { get; set; }
 
         public DbSet<Drops> Drops { get; set; }
@@ -24,13 +23,28 @@
         public DbSet<Region> Regions { get; set; }
 
         private readonly SqlConnectionStringBuilder builder = new();
-        private SqlConnection Connection { get; set; }
-        public DatabaseContext() : base("FarmingImpact")
+        SqlConnection Connection { get; set; }
+        public DatabaseConnection() : base("FarmingImpact")
         {
-            builder.DataSource = @"(localdb)\MSSQLLocalDB";
+            builder.DataSource = @"(localdb)\ProjectModels";
             builder.InitialCatalog = "FarmingImpact";
             Connection = new(builder.ConnectionString);
         }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+
+        //    #region Starter_Region
+
+        //    #endregion
+
+        //    #region Areas
+
+
+        //    #endregion
+
+
+        //}
+
 
     }
 }

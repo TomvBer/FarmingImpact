@@ -7,13 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" MaxWidth="800" MaxHeight="600" HorizontalContentAlignment="Stretch" MinWidth="800" MinHeight="600" Width="802" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" WindowStyle="SingleBorderWindow">
     <TabControl HorizontalAlignment="Center" VerticalAlignment="Center" Width="798" VerticalContentAlignment="Stretch" Height="596">
-        <TabItem x:Name="Mondstadt1" Header="Mondstadt" HorizontalAlignment="Center" Width="145" UseLayoutRounding="True" Margin="0,-2,0,0" Height="24" VerticalAlignment="Top">
-            <Canvas x:Name="MondstadtGrid" MaxHeight="600" MaxWidth="800" Height="553" Margin="0,0,0,0">
-                <Image x:Name="Mondstadt" Source="C:\Users\TomVa\source\repos\FarmingImpact\View\Regions\Screenshot 2022-03-19 140634.png" Stretch="Fill" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="792" Height="560" MouseLeftButtonDown="Mondstadt_MouseLeftButtonDown" />
-            </Canvas>
+        <TabItem x:Name="Mondstadt1" Header="Mondstadt" HorizontalAlignment="Center" Width="145" UseLayoutRounding="True" Margin="0,4,0,0" Height="26" VerticalAlignment="Top">
+            <Canvas x:Name="MondstadtGrid" MaxHeight="600" MaxWidth="800" Height="553" Margin="0,0,0,0"/>
         </TabItem>
-        <TabItem Header="TabItem" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" Width="145" HorizontalAlignment="Left" Margin="0,-1,0,0" Height="26" VerticalAlignment="Top"/>
-        <TabItem Header="TabItem" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.613" Width="145" HorizontalAlignment="Center" VerticalAlignment="Center" Height="22">
+        <TabItem Header="TabItem" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" Width="145" HorizontalAlignment="Right" Margin="0,4,1,0" Height="24" VerticalAlignment="Top"/>
+        <TabItem Header="TabItem" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.613" Width="145" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="22" Margin="0,0,0,3">
             <Grid Background="#FFE5E5E5"/>
         </TabItem>
     </TabControl>
