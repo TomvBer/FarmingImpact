@@ -2,13 +2,24 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <StartupObject>View.App</StartupObject>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+
+
   <ItemGroup>
-    <Folder Include="Regions\" />
+    <ProjectReference Include="..\UnitTest\UnitTest.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Regions\Screenshot 2022-03-19 140634.bmp" />
   </ItemGroup>
 
 </Project>

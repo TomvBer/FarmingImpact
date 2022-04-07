@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
@@ -10,11 +11,14 @@ namespace View
     /// </summary>
     public partial class MainWindow : Window
     {
+        public StackPanel MenuStackPanel;
+        public Canvas RegionCanvas;
+        
+
         public Ellipse Marker { get; set; }
         public Point Pointer { get; set; }
         public MainWindow()
         {
-
             InitializeComponent();
             Show();
         }
@@ -29,7 +33,7 @@ namespace View
 
 
             Ellipse mark = MakeMark();
-            MondstadtGrid.Children.Add(mark);
+            MainGrid.Children.Add(mark);
 
         }
         private Ellipse MakeMark()
@@ -53,7 +57,15 @@ namespace View
             Ellipse mark = MakeMark();
             mark.SetValue(TopProperty, point.Y);
             mark.SetValue(LeftProperty, point.X);
-            MondstadtGrid.Children.Add(mark);
+            MainGrid.Children.Add(mark);
+        }
+
+        private void MainMapsControl_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (MainMapsControl.SelectedContent == MondstadtTab){
+            
+            };
+
         }
     }
 }
