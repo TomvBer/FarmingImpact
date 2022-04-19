@@ -2,53 +2,101 @@
 
 namespace DatabaseEnd.First_Time
 {
-    public static class FirstTimeClasses
+    public class FirstTimeClasses
     {
         static bool IsFirstTime;
 
+        public FirstTimeClasses()
+        {
+            SeedSubAreas = new Area[]
+            {
+
+            };
+            SeedDrops = new Drops[]
+            {
+
+
+            };
+            SeedEnemies = new Enemies[]
+            {
+
+
+            };
+            Seedmaterials = new Materials[]
+            {
+
+
+            };
+            SeedMobs = new Mobs[]
+            {
+
+            };
+            Seedrarities = new Rarity[]
+            {
+
+
+            };
+            SeedRegions = new Region[] {
+               
+            };
+
+
+        }
 
         #region
-        static List<Area> SeedSubAreas { get; set; }
+        Area[] SeedSubAreas { get; set; }
+
         #endregion
 
 
         #region   
-        static List<Drops> SeedDrops { get; set; }
+        Drops[] SeedDrops { get; set; }
         #endregion
         #region    
-        static List<Enemies> SeedEnemies { get; set; }
+        Enemies[] SeedEnemies { get; set; }
         #endregion
         #region   
-        static List<Materials> Seedmaterials { get; set; }
+        Materials[] Seedmaterials { get; set; }
         #endregion
         #region   
-        static List<Mobs> SeedMobs { get; set; }
+        Mobs[] SeedMobs { get; set; }
         #endregion
         #region   
-        static List<Rarity> Seedrarities { get; set; }
+        Rarity[] Seedrarities { get; set; }
         #endregion
         #region  
-        //static List<Region> Seedregions
-        //{
-        //               Region region = new Region()
-        //        {
-        //            RegionId = 1;
-        //        Name = "Mondstadt";
-        //    };
-        //Region region2 = new Region()
-        //{
-        //    RegionId = 2,
-        //    Name = "Liyue"
-        //};
-        //Region region3 = new Region()
-        //{
-        //    RegionId = 3,
-        //    Name = "Inzamuam"
-        //}
+        Region[] SeedRegions { get; set; }
+
         #endregion
         #region  
 
+        public Region[] SetStartRegions() {
 
+            Region MondstRG = new Region
+            {
+                RegionId = 1,
+                Name = "Mondstadt"
+            };
+            Region LiyueRG = new Region
+            {
+                RegionId = 2,
+                Name = "Liyue"
+            };
+            Region RegionInazuma = new Region
+            {
+                RegionId = 3,
+                Name = "Inzamuam"
+            };
+            Region[] regions = new Region[]{
+                MondstRG, LiyueRG, LiyueRG
+            };
+            return regions;
+        }
+        public Rarity[] SetStartRarities()
+        {
+
+
+        }
 
 
         #endregion

@@ -12,8 +12,14 @@
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(DatabaseEnd.DatabaseContext context)
+        protected override void Seed(DatabaseContext context)
         {
+            using (context) {
+              if  (context.Database.CreateIfNotExists() == true) ;
+                { }
+
+            
+           }
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
