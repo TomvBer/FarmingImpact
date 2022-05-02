@@ -13,7 +13,7 @@ namespace DatabaseEnd.Models
         [Key]
         public int MobsId { get; set; }
         public Enemies? EnemyID { get; set; }
-        public Region? Region { get; set; }
+        public Region? RegionID { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
     }

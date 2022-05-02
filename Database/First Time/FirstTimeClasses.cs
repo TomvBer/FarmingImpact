@@ -42,18 +42,61 @@ namespace DatabaseEnd.First_Time
 
         #endregion
 
-
+        //Drops can only be done after Enemies and materials are done, same case for mobs.
         #region   
         Drops[] SeedDrops { get; set; }
         #endregion
+        //FirstTwoEnemiesDone, more will be added later for Testing, needs Controller for RegionID 
         #region    
         Enemies[] SeedEnemies { get; set; }
+        public Enemies[] SetStartEnemies()
+        {
+            Enemies[] SeedEnemies = new Enemies[1];
+            Enemies Slime = new Enemies
+            {
+                EnemyId = 0,
+                EnemyName = "Slime"
+            };
+            Enemies Hilichurl = new Enemies
+            {
+                EnemyId = 1,
+                EnemyName = "Hilichurl"
+            };
+
+            SeedEnemies[0] = Slime;
+            SeedEnemies[1] = Hilichurl;
+            return SeedEnemies;
+        }
         #endregion
+
+       //Slime&Hilichurl material added, needs Controller to finish rarityID
         #region   
         Materials[] Seedmaterials { get; set; }
+        public Materials[] SetStartMaterials()
+        {
+
+            Materials Slime = new Materials() { MaterialId = 0, Name = "Slime Condensate" };
+            Materials Slime2 = new Materials() { MaterialId = 1, Name = "Slime Secretion" };
+            Materials Slime3 = new Materials() { MaterialId = 2, Name = "Slime Concentrate" };
+            Materials Hilichurl1 = new Materials() { MaterialId = 3, Name = "Damaged Mask" };
+            Materials Hilichurl2 = new Materials() { MaterialId = 4, Name = "Stained Mask" };
+            Materials Hilichurl3 = new Materials() { MaterialId = 5, Name = "Omnious Mask" };
+
+            Materials[] SeedMaterials = new Materials[5];
+            SeedMaterials[0] = Slime;
+            SeedMaterials[1] = Slime2;
+            SeedMaterials[2] = Slime3;
+            SeedMaterials[3] = Hilichurl1;
+            SeedMaterials[4] = Hilichurl2;
+            SeedMaterials[5] = Hilichurl3;
+            return SeedMaterials;
+
+        }
         #endregion
         #region   
         Mobs[] SeedMobs { get; set; }
+
+
         #endregion
         //RaritySeedsDone
         #region   
@@ -86,14 +129,6 @@ namespace DatabaseEnd.First_Time
             return regions;
         }
         #endregion
-        #region  
-
-
-
-
-
-        #endregion
-
 
 
 
