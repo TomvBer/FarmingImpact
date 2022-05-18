@@ -1,32 +1,22 @@
-﻿<Window x:Name="MainWindow1" x:Class="View.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
+        x:Name="MainWindow1" x:Class="View.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" Grid.IsSharedSizeScope="True">
-
     <Grid x:Name="MainGrid" Visibility="Visible" MaxWidth="800" MaxHeight="600" UseLayoutRounding="True" ShowGridLines="True" Grid.IsSharedSizeScope="True" Opacity="100" Height="600" Width="800">
 
-
-
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="771" Height="21" VerticalAlignment="Top" Grid.ColumnSpan="2">
-            <TabControl  x:Name="MainMapsControl" HorizontalContentAlignment="Stretch" Padding="0,0,0,0" SelectionChanged="MainMapsControl_SelectionChanged" RenderTransformOrigin="0.502,0.541" Height="21" Width="790" BorderThickness="1,1,1,1" SnapsToDevicePixels="True">
-                <TabItem x:Name="MondstadtTab" Header="Mondstadt" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Height="Auto" Width="Auto" Margin="-1,-1,-52,1"/>
-
-                <TabItem x:Name="LiyueTab" Header="Liyue" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="52,0,-80,0" Width="Auto"/>
-                <TabItem x:Name="InazumaTab" Header="Inazuma" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="80,0,-122,0" Width="Auto" />
+            <TabControl  x:Name="MainMapsControl" HorizontalContentAlignment="Stretch" Padding="0,0,0,0" RenderTransformOrigin="0.502,0.541" Height="21" Width="790" BorderThickness="1,1,1,1" SnapsToDevicePixels="True" SelectionChanged="MainMapsControl_SelectionChanged">
+                <TabItem  TabIndex="0" x:Name="MondstadtTab" Header="Mondstadt" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Height="20" Width="Auto" Margin="-1,-1,-52,0" VerticalAlignment="Top"/>
+                <TabItem TabIndex="1" x:Name="LiyueTab" Header="Liyue" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="52,0,-80,0" Width="Auto"/>
+                <TabItem  TabIndex ="2" x:Name="InazumaTab" Header="Inazuma" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="80,0,-122,0" Width="Auto" />
             </TabControl>
         </StackPanel>
-        <Canvas x:Name="MapRender" Margin="0,22,-3,0" Height="583" VerticalAlignment="Top">
-            <Canvas.Background>
-                <ImageBrush ImageSource="/Regions/Screenshot 2022-03-19 140634.bmp"/>
-            </Canvas.Background>
-        </Canvas>
-
-
-
+        <Canvas x:Name="MapRender" Margin="0,22,-3,0" Height="583" VerticalAlignment="Top"/>
 
     </Grid>
 

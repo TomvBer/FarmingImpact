@@ -17,12 +17,12 @@ namespace DatabaseEnd.First_Time
 
 
             };
-            SeedEnemies = new Enemies[]
+            SeedEnemies = SetStartEnemies();
             {
 
 
             };
-            Seedmaterials = new Materials[]
+            Seedmaterials = SetStartMaterials();
             {
 
 

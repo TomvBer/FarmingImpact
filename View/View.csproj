@@ -19,7 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Regions\Screenshot 2022-03-19 140634.bmp" />
+    <Content Include="Regions\Screenshot 2022-03-19 140634.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Regions\Screenshot 2022-04-19 151247.bmp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+
 
 </Project>
