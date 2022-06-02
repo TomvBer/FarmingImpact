@@ -11,6 +11,10 @@ namespace DatabaseEnd.Controller
 {
     public class AreaController
     {
-        Area Area { get; set; }
+        public static void GetAllArea()
+        {
+        }
+        public static void CheckAreaById() { }
+    
     }
 }
