@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Classes\Controller.csproj", "{80D96101-8D47-4BB4-81D3-52861FC387BB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", "{70C9DBC9-CA32-46C7-972B-C0159BD133BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{80D96101-8D47-4BB4-81D3-52861FC387BB} = {80D96101-8D47-4BB4-81D3-52861FC387BB}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{124980D3-8C1C-457C-B38A-049A8E43C284}"
 	ProjectSection(ProjectDependencies) = postProject

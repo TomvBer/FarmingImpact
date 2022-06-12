@@ -14,6 +14,7 @@
                 <TabItem  TabIndex="0" x:Name="MondstadtTab" Header="Mondstadt" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Height="20" Width="Auto" Margin="-1,-1,-52,0" VerticalAlignment="Top"/>
                 <TabItem TabIndex="1" x:Name="LiyueTab" Header="Liyue" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="52,0,-80,0" Width="Auto"/>
                 <TabItem  TabIndex ="2" x:Name="InazumaTab" Header="Inazuma" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="80,0,-122,0" Width="Auto" />
+                <TabItem TabIndex="3" x:Name="BattlePassTab" Header="Battlepass" UseLayoutRounding="True" Grid.IsSharedSizeScope="True" Margin="122,-1,-122,-1"/>
             </TabControl>
         </StackPanel>
         <Canvas x:Name="MapRender" Margin="0,22,-3,0" Height="583" VerticalAlignment="Top"/>

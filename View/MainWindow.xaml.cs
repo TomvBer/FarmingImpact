@@ -18,8 +18,8 @@ namespace View
         public StackPanel MenuStackPanel { get; set; }
         public Canvas RegionCanvas { get; set; }
         public List<ImageBrush> MapImages { get; set; }
-        public bool IsLoaded { get; set; }
 
+       public UserControls.BattlePassChecks battlePass;
 
 
         public Ellipse Marker { get; set; }
@@ -27,7 +27,7 @@ namespace View
         public MainWindow()
         {
             InitializeComponent();
-            IsLoaded = Mapsloaded();
+            Mapsloaded();
             RegionCanvas = MapRender;
 
             Show();
@@ -118,6 +118,11 @@ namespace View
             if (MainMapsControl.SelectedContent == InazumaTab)
             {
                 RegionCanvas.Background = MapImages[2];
+            }
+            if (MainMapsControl.SelectedContent == BattlePassTab)
+            {
+                MainMapsControl.SelectedItem = battlePass;
+
             }
         }
 
